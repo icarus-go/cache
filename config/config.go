@@ -9,15 +9,29 @@ type Config struct {
 	Port     string
 	Password string
 	Adapter  adapter.Adapter
+	DB       int
 }
 
 // New 配置文件实例
-func New(adapter adapter.Adapter, scheme, host, port, password string) *Config {
+func New(adapter adapter.Adapter, scheme, host, port, password string, db int) *Config {
 	return &Config{
 		scheme,
 		host,
 		port,
 		password,
 		adapter,
+		db,
+	}
+}
+
+//DefaultNew 默认使用DB0
+func DefaultNew(adapter adapter.Adapter, scheme, host, port, password string) *Config {
+	return &Config{
+		scheme,
+		host,
+		port,
+		password,
+		adapter,
+		0,
 	}
 }

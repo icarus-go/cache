@@ -2,11 +2,11 @@ package redis
 
 import (
 	"fmt"
+	"pmo-test4.yz-intelligence.com/kit/cache/adapter"
+	"pmo-test4.yz-intelligence.com/kit/cache/base"
+	"pmo-test4.yz-intelligence.com/kit/cache/config"
 	"time"
 
-	"amiba.fun/amiba/go-cache/adapter"
-	"amiba.fun/amiba/go-cache/base"
-	"amiba.fun/amiba/go-cache/config"
 	"github.com/go-redis/redis"
 )
 
@@ -65,7 +65,7 @@ func (c *Client) Delete(keys ...string) (int64, error) {
 	return intCMD.Result()
 }
 
-// Keys keys
+// Keys keys 线上环境，禁止使用Keys
 func (c *Client) Keys(pattern string) ([]string, error) {
 	stringSliceCMD := c.client.Keys(pattern)
 	return stringSliceCMD.Result()
