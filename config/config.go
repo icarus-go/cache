@@ -4,12 +4,12 @@ import "pmo-test4.yz-intelligence.com/kit/cache/adapter"
 
 // Config 配置文件
 type Config struct {
-	Scheme   string
-	Host     string
-	Port     string
-	Password string
-	Adapter  adapter.Adapter
-	DB       int
+	Scheme   string          `json:"scheme" yaml:"scheme"`
+	Host     string          `json:"host" yaml:"host"`
+	Port     string          `json:"port" yaml:"port"`
+	Password string          `json:"password" yaml:"password"`
+	Adapter  adapter.Adapter `json:"adapter" yaml:"adapter"`
+	DB       int             `json:"db" yaml:"db"`
 }
 
 // New 配置文件实例
