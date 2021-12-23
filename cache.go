@@ -60,6 +60,9 @@ type ICache interface {
 	// GetCore 获取操作对象实例,可配合GetAdapter进行断言
 	GetCore() (interface{}, error)
 
+	// Scan 定量获取Key
+	Scan(cursor uint64, match string, count int64) ([]string, error)
+
 	// Close 关闭连接
 	Close() error
 }

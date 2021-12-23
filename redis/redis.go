@@ -71,6 +71,16 @@ func (c *Client) Keys(pattern string) ([]string, error) {
 	return stringSliceCMD.Result()
 }
 
+func (c *Client) Scan(cursor uint64, match string, count int64) ([]string, error) {
+	var value []string
+	result := c.client.Scan(cursor, match, count)
+	if result.Err() != nil {
+		return nil, result.Err()
+	}
+	value, cursor = result.Val()
+	return value, nil
+}
+
 // SetNX SetNX
 func (c *Client) SetNX(key string, value interface{}, expireation time.Duration) (bool, error) {
 	boolCMD := c.client.SetNX(key, value, expireation)

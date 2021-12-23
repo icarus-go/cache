@@ -95,3 +95,7 @@ func (*Base) GetCore() (interface{}, error) {
 func (*Base) Close() error {
 	return errors.New("未实现")
 }
+
+func (*Base) Scan(cursor uint64, match string, count int64) ([]string, error) {
+	return nil, errors.New("未实现")
+}
