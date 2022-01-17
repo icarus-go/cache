@@ -1,6 +1,6 @@
 package config
 
-import "pmo-test4.yz-intelligence.com/kit/cache/adapter"
+import "github.com/icarus-go/cache/adapter"
 
 // Config 配置文件
 type Config struct {

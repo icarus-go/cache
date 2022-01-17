@@ -3,7 +3,7 @@ package base
 import (
 	"errors"
 	"github.com/go-redis/redis"
-	"pmo-test4.yz-intelligence.com/kit/cache/adapter"
+	"github.com/icarus-go/cache/adapter"
 	"time"
 )
 

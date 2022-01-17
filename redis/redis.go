@@ -2,9 +2,9 @@ package redis
 
 import (
 	"fmt"
-	"pmo-test4.yz-intelligence.com/kit/cache/adapter"
-	"pmo-test4.yz-intelligence.com/kit/cache/base"
-	"pmo-test4.yz-intelligence.com/kit/cache/config"
+	"github.com/icarus-go/cache/adapter"
+	"github.com/icarus-go/cache/base"
+	"github.com/icarus-go/cache/config"
 	"time"
 
 	"github.com/go-redis/redis"

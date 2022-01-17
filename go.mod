@@ -1,4 +1,4 @@
-module pmo-test4.yz-intelligence.com/kit/cache
+module github.com/icarus-go/cache
 
 go 1.16
 

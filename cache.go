@@ -2,9 +2,9 @@ package cache
 
 import (
 	"errors"
-	"pmo-test4.yz-intelligence.com/kit/cache/adapter"
-	"pmo-test4.yz-intelligence.com/kit/cache/config"
-	"pmo-test4.yz-intelligence.com/kit/cache/redis"
+	"github.com/icarus-go/cache/adapter"
+	"github.com/icarus-go/cache/config"
+	"github.com/icarus-go/cache/redis"
 	"time"
 
 	rediscore "github.com/go-redis/redis"

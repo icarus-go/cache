@@ -1,8 +1,8 @@
 package cache
 
 import (
-	"pmo-test4.yz-intelligence.com/kit/cache/adapter"
-	"pmo-test4.yz-intelligence.com/kit/cache/config"
+	"github.com/icarus-go/cache/adapter"
+	"github.com/icarus-go/cache/config"
 	"testing"
 	"time"
 )
